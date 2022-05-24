@@ -10,8 +10,7 @@
     <canvas width="600" height="400"></canvas>
 
 <script>
-
-var tela = document.querySelector('canvas');
+    var tela = document.querySelector('canvas');
     var pincel = tela.getContext('2d');
     pincel.fillStyle = 'lightgray';
     pincel.fillRect(0, 0, 600, 400);
@@ -24,7 +23,17 @@ var tela = document.querySelector('canvas');
         pincel.fill();
     }
 
-    desenhaCirculo(20, 20, 10);
+        function limpaTela() {
+
+            pincel.clearRect(0, 0, 600, 400);
+
+        }
+
+        for(var x = 20; x < 600; x++) {
+            limpaTela();
+            desenhaCirculo(x, 20, 10);
+
+        }
 </script>
 </body>
 </html>
